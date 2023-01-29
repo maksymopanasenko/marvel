@@ -13,7 +13,7 @@ class CharInfo extends Component {
         error: false
     }
 
-    marvelSecvice = new MarvelService();
+    marvelService = new MarvelService();
 
     componentDidMount() {
         this.updateChar();
@@ -35,7 +35,7 @@ class CharInfo extends Component {
 
         this.onCharLoading();
 
-        this.marvelSecvice
+        this.marvelService
             .getCharacter(charId)
             .then(this.onCharLoaded)
             .catch(this.onError);
